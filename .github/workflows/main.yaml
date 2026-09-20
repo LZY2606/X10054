@@ -39,6 +39,14 @@ jobs:
     needs:
       - build
 
+  verify_core:
+    name: Verify Core (Offline)
+    uses: ./.github/workflows/.verify-core.yaml
+
+  verify_adapter:
+    name: Verify Adapter (Optional)
+    uses: ./.github/workflows/.verify-adapter.yaml
+
   release:
     name: Release
     runs-on: ubuntu-latest

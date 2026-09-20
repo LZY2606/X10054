@@ -33,6 +33,8 @@
     "doc": "typedoc",
     "lint": "biome check --write ./**",
     "test": "vitest",
+    "verify:adapter": "node scripts/verify/adapter.mjs",
+    "verify:core": "node scripts/verify/core.mjs",
     "typecheck": "tsc --noEmit --strict --skipLibCheck",
     "typecheck:strict": "tsc --project tsconfig.packages.json --noEmit --skipLibCheck false",
     "test:e2e": "pnpm --filter @ts-graphviz/e2e test"
