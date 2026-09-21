@@ -34,7 +34,8 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "test": "vitest run"
   },
   "dependencies": {
     "@ts-graphviz/ast": "workspace:^",

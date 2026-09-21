@@ -1,0 +1,25 @@
+strict digraph clustered {
+  graph [label="cluster roundtrip", labelloc=t];
+  node [shape=box, style=filled, fillcolor="#aaffaa"];
+  edge [color=gray40];
+
+  start -> middle -> end;
+  a -> {b c d};
+
+  subgraph cluster_first {
+    label="first cluster";
+    style=filled;
+    color=lightblue;
+    b;
+    c [label="node c"];
+    b -> c [label="inside"];
+  }
+
+  subgraph cluster_second {
+    label="second cluster";
+    d;
+    c -> d [ltail=cluster_first, lhead=cluster_second];
+  }
+
+  middle -> "quoted id" [label=<html <b>label</b>>, fontsize=12];
+}

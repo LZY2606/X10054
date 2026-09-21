@@ -1,0 +1,10 @@
+graph undirected {
+  graph [rankdir=LR];
+  node [shape=circle];
+  alpha -- beta -- gamma;
+  gamma -- delta [label="edge attr"];
+  // a line comment
+  alpha [label="alpha node"];
+  /* block comment */
+  beta [label=< <table><tr><td>html</td></tr></table> >];
+}

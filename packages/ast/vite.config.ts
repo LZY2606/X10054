@@ -1,23 +1,27 @@
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+import { withCoreTestConfig } from '../../scripts/verify/vitest.shared.ts';
 
-export default defineConfig({
-  build: {
-    target: 'ES2022',
-    outDir: './lib',
-    minify: false,
-    lib: {
-      entry: './src/ast.ts',
-      formats: ['es'],
-      fileName: 'ast',
+export default withCoreTestConfig(
+  '@ts-graphviz/ast',
+  defineConfig({
+    build: {
+      target: 'ES2022',
+      outDir: './lib',
+      minify: false,
+      lib: {
+        entry: './src/ast.ts',
+        formats: ['es'],
+        fileName: 'ast',
+      },
+      rollupOptions: {
+        external: ['@ts-graphviz/common'],
+      },
     },
-    rollupOptions: {
-      external: ['@ts-graphviz/common'],
-    },
-  },
-  plugins: [
-    dts({
-      rollupTypes: true,
-    }) as any,
-  ],
-});
+    plugins: [
+      dts({
+        rollupTypes: true,
+      }) as any,
+    ],
+  }),
+);

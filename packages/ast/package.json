@@ -31,7 +31,8 @@
   },
   "scripts": {
     "build": "vite build",
-    "codegen": "peggy --dts -d \"{ Builder }:../../builder/index.js\" --extra-options-file src/dot-shim/parser/peggy.options.json -o src/dot-shim/parser/_parse.js src/dot-shim/parser/dot.peggy"
+    "codegen": "peggy --dts -d \"{ Builder }:../../builder/index.js\" --extra-options-file src/dot-shim/parser/peggy.options.json -o src/dot-shim/parser/_parse.js src/dot-shim/parser/dot.peggy",
+    "test": "vitest run"
   },
   "dependencies": {
     "@ts-graphviz/common": "workspace:^"
