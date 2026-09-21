@@ -17,6 +17,10 @@ jobs:
     name: Code Generation
     uses: ./.github/workflows/.codegen.yaml
 
+  verify_core:
+    name: Verify Pure Packages
+    uses: ./.github/workflows/.verify-core.yaml
+
   check:
     name: Check
     uses: ./.github/workflows/.check.yaml
