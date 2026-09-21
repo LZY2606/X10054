@@ -1,0 +1,4 @@
+digraph ports {
+  a:name:n -> b:e;
+  c -> "d":sw [label="compass"];
+}

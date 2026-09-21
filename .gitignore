@@ -164,3 +164,7 @@ coverage/
 .parcel-cache/
 .vite/
 .turbo/
+
+# --- Offline verification scratch/outputs ---
+packages/*/.verify-typegen/
+packages/*/coverage/

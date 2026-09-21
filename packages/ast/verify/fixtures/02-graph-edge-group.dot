@@ -1,0 +1,4 @@
+graph topology {
+  {a b c} -- {d e};
+  a -- d [color=blue];
+}

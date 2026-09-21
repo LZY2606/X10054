@@ -35,7 +35,9 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit --strict --skipLibCheck",
     "typecheck:strict": "tsc --project tsconfig.packages.json --noEmit --skipLibCheck false",
-    "test:e2e": "pnpm --filter @ts-graphviz/e2e test"
+    "test:e2e": "pnpm --filter @ts-graphviz/e2e test",
+    "verify:core": "pnpm --filter @ts-graphviz/ast --filter @ts-graphviz/core --filter @ts-graphviz/common test",
+    "verify:adapter": "pnpm --filter @ts-graphviz/adapter test"
   },
   "devDependencies": {
     "@biomejs/biome": "2.0.0",

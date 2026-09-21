@@ -33,7 +33,8 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "test": "node ../../tools/verify/package.mjs packages/common"
   },
   "devDependencies": {
     "typescript": "^5.8.2",

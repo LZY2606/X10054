@@ -1,0 +1,7 @@
+digraph build {
+  // compilation stages
+  source [label="source.ts"];
+  parser [shape=box];
+  source -> parser [label=parse];
+  parser -> emitter;
+}

@@ -1,0 +1,5 @@
+digraph quotes {
+  a [label="line one\nline two\ttab \"quoted\""];
+  b [label="back\\slash"];
+  c [comment="semicolon;inside"];
+}

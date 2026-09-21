@@ -1,0 +1,10 @@
+digraph clustered {
+  subgraph cluster_core {
+    label="core";
+    n1; n2; n1 -> n2;
+  }
+  subgraph cluster_outer {
+    n3;
+  }
+  n2 -> n3 [ltail=cluster_core];
+}

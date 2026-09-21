@@ -1,0 +1,4 @@
+digraph html_like {
+  node [shape=plaintext];
+  a [label=<<table border="0"><tr><td>hello</td></tr><tr><td>world</td></tr></table>>];
+}

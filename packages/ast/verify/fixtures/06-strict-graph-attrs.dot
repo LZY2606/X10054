@@ -1,0 +1,6 @@
+strict graph settings {
+  graph [rankdir=LR, splines=true];
+  node [style=filled, fillcolor=lightyellow];
+  edge [arrowhead=open];
+  x -- y;
+}

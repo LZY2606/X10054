@@ -32,6 +32,13 @@ jobs:
     uses: ./.github/workflows/.unit-test.yaml
     needs:
       - codegen
+  core_verify:
+    name: Core Verify (isolated, offline)
+    uses: ./.github/workflows/.core-verify.yaml
+
+  adapter_verify:
+    name: Adapter Verify (optional external tool)
+    uses: ./.github/workflows/.adapter-verify.yaml
 
   e2e_test:
     name: E2E Test
@@ -47,6 +54,7 @@ jobs:
       - check
       - build
       - unit_test
+      - core_verify
       - e2e_test
     if: ${{ github.repository == 'ts-graphviz/ts-graphviz' && github.ref == 'refs/heads/main' && success() }}
     permissions:
